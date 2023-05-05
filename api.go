@@ -93,7 +93,7 @@ func WriteJSON(w http.ResponseWriter, status int, v any) error {
 }
 
 type ApiError struct {
-	Error string
+	Error string `json:"error"`
 }
 
 type apiFunc func(http.ResponseWriter, *http.Request) error
